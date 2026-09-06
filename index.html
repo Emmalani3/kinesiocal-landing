@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KinesioCal — Booking and practice management, built by a therapist</title>
+  <meta name="description" content="KinesioCal is scheduling, reminders, clients, and paperwork in one calm place — booking software built by a massage therapist for hands-on practices.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='3' y='5' width='18' height='16' rx='3' fill='%2300AF8F'/%3E%3Crect x='3' y='5' width='18' height='5' rx='2' fill='%2303196A'/%3E%3Crect x='7' y='2' width='2' height='5' rx='1' fill='%2303196A'/%3E%3Crect x='15' y='2' width='2' height='5' rx='1' fill='%2303196A'/%3E%3Cpath d='M8.2 15.2l2.4 2.4 5-5' stroke='white' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('kc-theme');
+        if (!t) t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
+    })();
+  </script>
+</head>
+<body>
+  <div class="gradient-bar"></div>
+  <header class="mkt-nav">
+    <a class="brand" href="index.html">Kinesio<span class="brand-cal">Cal</span></a>
+    <nav class="mkt-links">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#about">About</a>
+      <a href="support.html">Support</a>
+    </nav>
+    <span class="spacer"></span>
+    <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+      <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+      <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5V5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3L7 7M17 17l1.7 1.7M18.7 5.3L17 7M7 17l-1.7 1.7"/></svg>
+    </button>
+    <a class="button small" href="mailto:KinesioCalendar@gmail.com">Get in touch</a>
+  </header>
+
+  <section class="mkt-hero">
+    <h1>The booking platform that works the way therapists do.</h1>
+    <p class="mkt-tagline">
+      Scheduling, reminders, clients, and paperwork in one calm place —
+      built by a massage therapist who was tired of trade-offs.
+    </p>
+    <div class="mkt-hero-cta">
+      <a class="button" href="#features">See what KinesioCal does</a>
+      <a class="button dark" href="mailto:KinesioCalendar@gmail.com">Email us</a>
+    </div>
+    <p class="helper">
+      KinesioCal is getting ready to launch. Email
+      KinesioCalendar@gmail.com and we&rsquo;ll let you know the moment
+      the doors open.
+    </p>
+  </section>
+
+  <section class="mkt-section">
+    <div class="mkt-cards">
+      <div class="card mkt-card">
+        <span class="mkt-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 9.5h17M8 2.5V6M16 2.5V6"/></svg>
+        </span>
+        <h3>A calendar that never tells you no</h3>
+        <p>Drag to book, drag to reschedule. Online-booking rules shape
+          what clients see — they never block you on your own calendar.</p>
+      </div>
+      <div class="card mkt-card">
+        <span class="mkt-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 0 1-14.6 4.5M4 12a8 8 0 0 1 14.6-4.5"/><path d="M5.5 20v-3.5H9M18.5 4v3.5H15"/></svg>
+        </span>
+        <h3>Standing appointments, for real</h3>
+        <p>Repeat weekly, monthly, or forever. KinesioCal books a year
+          ahead and keeps the series going until you stop it.</p>
+      </div>
+      <div class="card mkt-card">
+        <span class="mkt-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7 4.7 1.8-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8L12 3z"/><path d="M18.8 14.5l.85 2.15 2.15.85-2.15.85-.85 2.15-.85-2.15-2.15-.85 2.15-.85.85-2.15z"/></svg>
+        </span>
+        <h3>Easy Mode</h3>
+        <p>Set up your info, services, and hours — that&rsquo;s it.
+          Everything else has sensible defaults you can change later.</p>
+      </div>
+      <div class="card mkt-card">
+        <span class="mkt-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>
+        </span>
+        <h3>Fewer no-shows, automatically</h3>
+        <p>Reminders before, follow-ups after, and a waitlist that offers
+          freed spots the moment someone cancels.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mkt-section" id="features">
+    <h2 class="mkt-section-title">Everything you need. Nothing in your way.</h2>
+    <p class="mkt-section-sub">
+      Each feature exists because a working therapist needed it — here&rsquo;s
+      what KinesioCal does and why.
+    </p>
+
+    <div class="mkt-feature">
+      <div class="mkt-feature-text">
+        <span class="mkt-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 9.5h17M8 2.5V6M16 2.5V6"/></svg>
+        </span>
+        <h2>A calendar that works the way you do</h2>
+        <p class="mkt-why">Because your booking software should never tell you no on your own calendar.</p>
+        <p>Drag an open slot to book. Drag a card to reschedule. Each
+          therapist gets their own column under every day, buffers and
+          turnover time show honestly, and business hours shade the grid.
+          All the rules you set for online booking — notice windows,
+          spacing, day availability — shape what clients see. They never
+          block you or your staff.</p>
+      </div>
+      <div class="mkt-img-ph" role="img" aria-label="Screenshot: the drag-and-drop calendar with two provider columns">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="M3.5 15.5l4.5-4.5 4 4 3-3 5.5 5.5"/><circle cx="9" cy="9" r="1.3"/></svg>
+        <span>Screenshot: the drag-and-drop calendar with two provider columns</span>
+      </div>
+    </div>
+
+    <div class="mkt-feature flip">
+      <div class="mkt-feature-text">
+        <span class="mkt-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 0 1-14.6 4.5M4 12a8 8 0 0 1 14.6-4.5"/><path d="M5.5 20v-3.5H9M18.5 4v3.5H15"/></svg>
+        </span>
+        <h2>Standing appointments that don&rsquo;t stop</h2>
+        <p class="mkt-why">Because regulars are the backbone of a practice.</p>
+        <p>Repeat any appointment every N days, weeks, or months — for a
+          set number of visits, or forever. &ldquo;Does not stop&rdquo; books a full
+          year ahead and quietly keeps extending itself. Move one visit or
+          the whole series; cancel one or all; stop repeating from any
+          appointment.</p>
+      </div>
+      <div class="mkt-img-ph" role="img" aria-label="Screenshot: the repeat options with does-not-stop">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="M3.5 15.5l4.5-4.5 4 4 3-3 5.5 5.5"/><circle cx="9" cy="9" r="1.3"/></svg>
+        <span>Screenshot: the repeat options with &ldquo;does not stop&rdquo;</span>
+      </div>
+    </div>
+
+    <div class="mkt-feature">
+      <div class="mkt-feature-text">
+        <span class="mkt-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.3 3.8 5.2 3.8 8.5s-1.3 6.2-3.8 8.5c-2.5-2.3-3.8-5.2-3.8-8.5S9.5 5.8 12 3.5z"/></svg>
+        </span>
+        <h2>Online booking you actually control</h2>
+        <p class="mkt-why">Because filling your book shouldn&rsquo;t mean giving strangers the keys.</p>
+        <p>A copyable booking link with one toggle to turn public booking
+          on or off. Set how much notice clients need, how far ahead they
+          can book, which days each service is offered, and how tightly
+          appointments pack. Guests can book without an account — and claim
+          their history later if they make one.</p>
+      </div>
+      <div class="mkt-img-ph" role="img" aria-label="Screenshot: the public booking page on a phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="M3.5 15.5l4.5-4.5 4 4 3-3 5.5 5.5"/><circle cx="9" cy="9" r="1.3"/></svg>
+        <span>Screenshot: the public booking page on a phone</span>
+      </div>
+    </div>
+
+    <div class="mkt-feature flip">
+      <div class="mkt-feature-text">
+        <span class="mkt-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6.5h11v9h-11zM13.5 9.5h3.6l3.4 3.4v2.6h-7"/><circle cx="7.5" cy="17.5" r="1.75"/><circle cx="16.5" cy="17.5" r="1.75"/></svg>
+        </span>
+        <h2>Travel-aware mobile scheduling</h2>
+        <p class="mkt-why">Because a home-visit practice lives and dies by drive time.</p>
+        <p>For mobile sessions, KinesioCal checks real travel time between
+          appointments before offering a slot, and pads your schedule so
+          you&rsquo;re never booked somewhere you can&rsquo;t reach. House-call
+          practices get honest schedules, not optimistic ones.</p>
+      </div>
+      <div class="mkt-img-ph" role="img" aria-label="Screenshot: a mobile appointment with travel windows">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="M3.5 15.5l4.5-4.5 4 4 3-3 5.5 5.5"/><circle cx="9" cy="9" r="1.3"/></svg>
+        <span>Screenshot: a mobile appointment with travel windows</span>
+      </div>
+    </div>
+
+    <div class="mkt-feature">
+      <div class="mkt-feature-text">
+        <span class="mkt-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+        </span>
+        <h2>A waitlist that fills cancellations for you</h2>
+        <p class="mkt-why">Because an empty slot should fill itself.</p>
+        <p>When a booked spot frees up, matching waitlist clients are
+          offered it automatically, in order. Optional last-call blasts
+          reach clients who asked for short-notice openings — and only
+          them.</p>
+      </div>
+      <div class="mkt-img-ph" role="img" aria-label="Screenshot: the waitlist page with a last-call toggle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="M3.5 15.5l4.5-4.5 4 4 3-3 5.5 5.5"/><circle cx="9" cy="9" r="1.3"/></svg>
+        <span>Screenshot: the waitlist page with a last-call toggle</span>
+      </div>
+    </div>
+
+    <div class="mkt-feature flip">
+      <div class="mkt-feature-text">
+        <span class="mkt-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7 4.7 1.8-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8L12 3z"/><path d="M18.8 14.5l.85 2.15 2.15.85-2.15.85-.85 2.15-.85-2.15-2.15-.85 2.15-.85.85-2.15z"/></svg>
+        </span>
+        <h2>Easy Mode</h2>
+        <p class="mkt-why">Because you became a therapist to do massage, not IT.</p>
+        <p>Pick Easy Mode at signup and you&rsquo;ll only see the
+          essentials: your info, your services, your hours, your calendar.
+          Every other setting quietly uses a sensible default. Flip the
+          toggle anytime to see everything — it never changes or resets
+          a thing.</p>
+      </div>
+      <div class="mkt-img-ph" role="img" aria-label="Screenshot: Easy Mode's simplified settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="M3.5 15.5l4.5-4.5 4 4 3-3 5.5 5.5"/><circle cx="9" cy="9" r="1.3"/></svg>
+        <span>Screenshot: Easy Mode&rsquo;s simplified settings</span>
+      </div>
+    </div>
+
+    <h2 class="mkt-section-title">And that&rsquo;s just the start.</h2>
+    <div class="mkt-cards">
+      <div class="card mkt-card">
+        <span class="mkt-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>
+        </span>
+        <h3>Reminders &amp; follow-ups</h3>
+        <p>Every business starts with a day-before reminder already set up.
+          Add as many sends as you like, before and after the visit.</p>
+      </div>
+      <div class="card mkt-card">
+        <span class="mkt-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3.5h7L18.5 8v12a1.5 1.5 0 0 1-1.5 1.5H7A1.5 1.5 0 0 1 5.5 20V5A1.5 1.5 0 0 1 7 3.5z"/><path d="M14 3.5V8h4.5M8.5 12.5h7M8.5 16h7"/></svg>
+        </span>
+        <h3>Invoices, done properly</h3>
+        <p>Generate an invoice for any date range with provider credentials
+          printed right on it — download the PDF or email it straight to
+          the client.</p>
+      </div>
+      <div class="card mkt-card">
+        <span class="mkt-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9 10h.01M15 10h.01M8.5 14a4.5 4.5 0 0 0 7 0"/></svg>
+        </span>
+        <h3>Clients, remembered</h3>
+        <p>Staff-only flags, birthday and paperwork-renewal reminders,
+          clean duplicate merging — the details that turn a booking into a
+          relationship.</p>
+      </div>
+      <div class="card mkt-card">
+        <span class="mkt-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 8.5h15v3.5h-15zM6 12v7.5a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V12M12 8.5v12M12 8.5C10.5 4.5 5.5 4.5 6.5 8M12 8.5c1.5-4 6.5-4 5.5-.5"/></svg>
+        </span>
+        <h3>Gift cards &amp; online shop</h3>
+        <p>Sell gift cards, retail, and packages online. Recipients get
+          their code by email, and balances apply at booking and checkout
+          automatically.</p>
+      </div>
+      <div class="card mkt-card">
+        <span class="mkt-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 8.5v-2A1.5 1.5 0 0 1 5 5h14a1.5 1.5 0 0 1 1.5 1.5v2a2.5 2.5 0 0 0 0 5v2A1.5 1.5 0 0 1 19 17H5a1.5 1.5 0 0 1-1.5-1.5v-2a2.5 2.5 0 0 0 0-5z"/><path d="M14.5 7.5v1M14.5 11v1M14.5 14.5v1"/></svg>
+        </span>
+        <h3>Events &amp; timed sign-ups</h3>
+        <p>Run chair-massage events and classes with slot grids, printable
+          flyers with QR codes, sign-in sheets, and an organizer portal.</p>
+      </div>
+      <div class="card mkt-card">
+        <span class="mkt-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5.5" y="4.5" width="13" height="16" rx="2"/><rect x="9" y="2.5" width="6" height="4" rx="1"/><path d="M8.5 11.5h7M8.5 15h5"/></svg>
+        </span>
+        <h3>Consent forms &amp; intake</h3>
+        <p>Build policy and intake forms in minutes, collect signatures
+          online or on paper, and let renewals track themselves.</p>
+      </div>
+      <div class="card mkt-card">
+        <span class="mkt-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5.5" y="10.5" width="13" height="9" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></svg>
+        </span>
+        <h3>Blocking that means it</h3>
+        <p>Block a client and they can&rsquo;t book online, can&rsquo;t reach you
+          through the platform, and receive no emails. Unblocking restores
+          everything exactly as it was.</p>
+      </div>
+      <div class="card mkt-card">
+        <span class="mkt-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="10" r="3"/><path d="M5.8 18a7.5 7.5 0 0 1 12.4 0"/></svg>
+        </span>
+        <h3>Clients own their data</h3>
+        <p>Every client gets a portal with their history, contact info, and
+          downloads — theirs to keep, even if a business and a client part
+          ways.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mkt-section" id="about">
+    <h2 class="mkt-section-title">Built by a therapist. Used by its maker.</h2>
+    <div class="mkt-feature">
+      <div class="mkt-feature-text">
+        <h2>Why KinesioCal exists</h2>
+        <p>KinesioCal was created by a massage therapist who runs her own
+          practice on it every day. After years of using the big booking
+          platforms, she found that every one of them was a trade-off:
+          the one with the nice calendar couldn&rsquo;t do invoices, the
+          one with good reminders fought her on walk-ins, and all of
+          them seemed to think the software knew her schedule better
+          than she did.</p>
+        <p>She felt there needed to be a better platform for therapists
+          and similar hands-on fields — one where the automation serves
+          the practitioner instead of overruling them. So she built it.</p>
+      </div>
+      <div class="mkt-img-ph" role="img" aria-label="Photo: the founder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="10" r="3"/><path d="M5.8 18a7.5 7.5 0 0 1 12.4 0"/></svg>
+        <span>Photo: the founder</span>
+      </div>
+    </div>
+
+    <div class="mkt-cards">
+      <div class="card mkt-card">
+        <h3>Your calendar is yours</h3>
+        <p>Online-booking rules shape what clients see. They never block
+          you. If you want to book a walk-in at 4:55, you book the
+          walk-in.</p>
+      </div>
+      <div class="card mkt-card">
+        <h3>Low-tech first</h3>
+        <p>Everything works without reading a manual. Easy Mode hides what
+          you don&rsquo;t need; sensible defaults handle the rest.</p>
+      </div>
+      <div class="card mkt-card">
+        <h3>Clients own their data</h3>
+        <p>Portals belong to the client. Their history, their contact info,
+          their downloads — even if a business and a client part ways.</p>
+      </div>
+      <div class="card mkt-card">
+        <h3>Honest features</h3>
+        <p>Blocking blocks. Buffers show. Reminders send. If a button says
+          it does something, it does exactly that — nothing less, nothing
+          hidden.</p>
+      </div>
+    </div>
+
+    <div class="card mkt-cta">
+      <h2>From one practice to yours</h2>
+      <p>Want to know when KinesioCal opens its doors — or just want to
+        talk shop about running a practice?</p>
+      <a class="button" href="mailto:KinesioCalendar@gmail.com">Email KinesioCalendar@gmail.com</a>
+    </div>
+  </section>
+
+  <footer class="mkt-footer">
+    <div>
+      <strong>KinesioCal</strong>
+      <p>Booking and practice management, built by a therapist.</p>
+    </div>
+    <nav class="mkt-links">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#about">About</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy policy</a>
+      <a href="terms.html">Terms of service</a>
+    </nav>
+    <div class="legal-line">
+      &copy; 2026 KinesioCal, LLC &middot;
+      <a href="mailto:KinesioCalendar@gmail.com">KinesioCalendar@gmail.com</a> &middot;
+      <a href="privacy.html">Privacy</a> &middot;
+      <a href="terms.html">Terms</a>
+    </div>
+  </footer>
+  <script src="theme.js"></script>
+</body>
+</html>
