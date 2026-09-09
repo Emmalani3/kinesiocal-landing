@@ -92,6 +92,19 @@ h1, h2, h3 { line-height: 1.2; }
   padding: calc(0.65rem - 2px) calc(1.4rem - 2px);
 }
 
+.button.ghost {
+  background: transparent;
+  border: 2px solid var(--text-primary);
+  color: var(--text-primary);
+  padding: calc(0.65rem - 2px) calc(1.4rem - 2px);
+}
+
+.button.ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: none;
+}
+
 .button.small { padding: 0.45rem 1rem; font-size: 0.9rem; }
 :root[data-theme="dark"] .button.dark.small { padding: calc(0.45rem - 2px) calc(1rem - 2px); }
 
@@ -326,6 +339,41 @@ h1, h2, h3 { line-height: 1.2; }
 
 .mkt-cta h2, .mkt-cta p { margin: 0; }
 .mkt-cta p { color: var(--text-secondary); }
+
+/* ------------------------------- pricing -------------------------------- */
+
+.mkt-pricing .mkt-card .button { margin-top: auto; align-self: flex-start; }
+
+.mkt-featured { border: 2px solid var(--accent); }
+
+.mkt-featured-tag {
+  align-self: flex-start;
+  background: rgb(3 132 14 / 0.12);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+:root[data-theme="dark"] .mkt-featured-tag { background: rgb(124 227 137 / 0.15); }
+
+.mkt-price { font-size: 2rem; font-weight: 700; margin: 0.2rem 0; color: var(--text-primary); }
+
+.mkt-price span { font-size: 1rem; font-weight: 400; color: inherit; opacity: 0.7; }
+
+.mkt-points { margin: 0 0 1rem; padding-left: 1.1rem; color: var(--text-secondary); }
+
+.mkt-points li { margin: 0.3rem 0; line-height: 1.45; }
+
+.mkt-seat-note {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
 
 /* -------------------------------- footer -------------------------------- */
 
