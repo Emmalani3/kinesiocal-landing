@@ -11,3 +11,8 @@
     try { localStorage.setItem('kc-theme', next); } catch (e) { /* private mode */ }
   });
 })();
+
+// Copyright year stays current automatically (Emma 2026-09-26).
+document.querySelectorAll('.kc-year').forEach(function (el) {
+  el.textContent = String(new Date().getFullYear());
+});
