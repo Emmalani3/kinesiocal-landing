@@ -9,7 +9,7 @@ GitHub Pages; no build step, no dependencies.
 | File | Purpose |
 |---|---|
 | `index.html` | Landing page: hero, feature highlights, deep-dive feature rows, about/principles, contact CTA |
-| `pricing.html` | Plans & pricing — three tiers; every subscription includes one calendar seat, staff logins are unlimited and free |
+| `pricing.html` | Plans & pricing — three tiers; every subscription includes one calendar seat and free staff logins (5, +2 per extra seat) |
 | `support.html` | Support & contact page (KinesioCalendar@gmail.com) |
 | `privacy.html` | Privacy policy |
 | `terms.html` | Terms of service |
