@@ -50,3 +50,55 @@ document.querySelectorAll('.mkt-carousel').forEach(function (root) {
   track.addEventListener('scroll', function () { window.requestAnimationFrame(paint); });
   paint();
 });
+
+// Image lightbox: click any product screenshot or photo to view it full
+// screen. Close with the X, by clicking the image or backdrop, or Escape.
+(function () {
+  var targets = document.querySelectorAll('.mkt-img, .mkt-carousel-slide img, .mkt-headshot');
+  if (!targets.length) return;
+  var box = document.createElement('div');
+  box.className = 'mkt-lightbox';
+  box.setAttribute('role', 'dialog');
+  box.setAttribute('aria-modal', 'true');
+  box.setAttribute('aria-label', 'Image viewer');
+  box.innerHTML =
+    '<button class="mkt-lightbox-close" type="button" aria-label="Close">' +
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>' +
+    '</button><img alt=""><p class="mkt-lightbox-caption"></p>';
+  document.body.appendChild(box);
+  var img = box.querySelector('img');
+  var cap = box.querySelector('.mkt-lightbox-caption');
+  var lastFocus = null;
+  function open(src, alt, caption) {
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    cap.textContent = caption || '';
+    box.classList.add('open');
+    document.body.classList.add('mkt-lightbox-open');
+    box.querySelector('.mkt-lightbox-close').focus();
+  }
+  function close() {
+    box.classList.remove('open');
+    document.body.classList.remove('mkt-lightbox-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  Array.prototype.forEach.call(targets, function (el) {
+    el.setAttribute('tabindex', '0');
+    el.setAttribute('role', 'button');
+    function trigger() {
+      var wrap = el.closest('figure') || el.parentElement;
+      var capEl = wrap && (wrap.querySelector('figcaption') || wrap.querySelector('.mkt-img-caption'));
+      open(el.currentSrc || el.src, el.alt, capEl ? capEl.textContent : '');
+    }
+    el.addEventListener('click', trigger);
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); trigger(); }
+    });
+  });
+  box.addEventListener('click', close);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && box.classList.contains('open')) close();
+  });
+})();
