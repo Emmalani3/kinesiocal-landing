@@ -10,6 +10,7 @@ GitHub Pages; no build step, no dependencies.
 |---|---|
 | `index.html` | Landing page: hero, four highlight cards, the spotlight feature rows (with real product screenshots), "and that's just the start" cards, about/principles, contact CTA |
 | `features.html` | The comprehensive feature list, grouped by area, with Pro / Premium tags where a feature is gated |
+| `roadmap.html` | Coming soon — this year / next year / no timeline yet (HIPAA certification note, SMS) |
 | `pricing.html` | Plans & pricing — three tier cards plus the full tier-by-tier comparison table (`#compare`) |
 | `support.html` | Support & contact page (KinesioCalendar@gmail.com) |
 | `privacy.html` | Privacy policy |
@@ -38,10 +39,11 @@ server); the showcase data is tagged `notes="showcase"` on 2026-10-20 /
 | `client-invoice.png`, `portal-invoice.png`, `portal-appointments.png` | Client-downloadable invoices and the portal |
 | `repeat-options.png` | Standing appointments |
 | `easy-mode-settings.png` | Easy Mode |
+| `gift-grants.png` | Gift cards, packages, memberships and the gift-grant send |
 | `booking-log.png` | Abandoned bookings (a real declined-card run with Stripe's 4000 0000 0000 0002 test card, 2026-10-16) |
 
 Still placeholders (dashed boxes) on `index.html`: the reminder email with a
-pay-deposit button, the waitlist page with entries, and the founder photo.
+pay-deposit button and the waitlist page with entries.
 
 ## Deploying to GitHub Pages
 
