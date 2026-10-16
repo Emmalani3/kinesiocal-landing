@@ -781,3 +781,12 @@ body.mkt-lightbox-open { overflow: hidden; }
 @media (max-width: 720px) {
   .mkt-about-carousel .mkt-carousel-slide img { height: auto; }
 }
+
+/* Anchor targets clear the sticky nav (and lazy images reserve their space via width/height). */
+[id] { scroll-margin-top: 72px; }
+
+/* On phones the wrapped nav would cover a quarter of the screen if sticky. */
+@media (max-width: 720px) {
+  .mkt-nav { position: static; }
+  [id] { scroll-margin-top: 16px; }
+}
