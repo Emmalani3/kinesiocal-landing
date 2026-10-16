@@ -630,6 +630,17 @@ h1, h2, h3 { line-height: 1.2; }
 
 /* ------------------------------ pricing add-on card ----------------------- */
 
-.mkt-addon { border: 2px dashed var(--border-subtle); position: relative; }
+.mkt-addon { border: 2px dashed var(--border-subtle); position: relative; padding: 1.4rem 1.6rem; }
 .mkt-addon-tag { background: var(--bg-page); color: var(--text-secondary); }
 :root[data-theme="dark"] .mkt-addon-tag { background: var(--bg-page); }
+
+.mkt-addon-head { display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: flex-start; justify-content: space-between; }
+.mkt-addon-head > div { max-width: 60ch; }
+.mkt-addon-head h3 { margin: 0.5rem 0 0.25rem; }
+.mkt-addon-head p { margin: 0.25rem 0 0; color: var(--text-secondary); }
+.mkt-addon-head .mkt-price { margin: 0; white-space: nowrap; }
+.mkt-addon-details { margin-top: 0.9rem; }
+.mkt-addon-details summary { list-style: none; cursor: pointer; }
+.mkt-addon-details summary::-webkit-details-marker { display: none; }
+.mkt-addon-details[open] summary { margin-bottom: 0.75rem; }
+.mkt-addon-details .mkt-points { margin-bottom: 0; }
