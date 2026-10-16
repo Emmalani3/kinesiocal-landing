@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All features — KinesioCal</title>
+  <meta name="description" content="Every feature in KinesioCal, grouped by what it does for a hands-on practice: calendar, online booking, house calls, events, clients, safety, reminders, automation, payments, money and the client portal.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='3' y='5' width='18' height='16' rx='3' fill='%2300AF8F'/%3E%3Crect x='3' y='5' width='18' height='5' rx='2' fill='%2303196A'/%3E%3Crect x='7' y='2' width='2' height='5' rx='1' fill='%2303196A'/%3E%3Crect x='15' y='2' width='2' height='5' rx='1' fill='%2303196A'/%3E%3Cpath d='M8.2 15.2l2.4 2.4 5-5' stroke='white' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('kc-theme');
+        if (!t) t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
+    })();
+  </script>
+</head>
+<body>
+  <div class="gradient-bar"></div>
+  <header class="mkt-nav">
+    <a class="brand" href="index.html">Kinesio<span class="brand-cal">Cal</span></a>
+    <nav class="mkt-links">
+      <a href="index.html#features">Features</a>
+      <a href="features.html">All features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="index.html#about">About</a>
+      <a href="support.html">Support</a>
+    </nav>
+    <span class="spacer"></span>
+    <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+      <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+      <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5V5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3L7 7M17 17l1.7 1.7M18.7 5.3L17 7M7 17l-1.7 1.7"/></svg>
+    </button>
+    <a class="button small" href="mailto:KinesioCalendar@gmail.com">Get in touch</a>
+  </header>
+
+  <section class="mkt-hero mkt-hero-small">
+    <h1>Everything KinesioCal does</h1>
+    <p class="mkt-tagline">
+      The complete list, grouped by what it does for your practice.
+      Everything is included on every plan unless it carries a tag.
+    </p>
+  </section>
+
+  <section class="mkt-section">
+    <p class="mkt-legend">
+      <span><span class="mkt-tier-tag pro">Pro</span> Professional and Premium</span>
+      <span><span class="mkt-tier-tag premium">Premium</span> Premium only</span>
+      <span>No tag: every plan, including Basic</span>
+    </p>
+
+    <h2 class="mkt-section-title">Calendar &amp; scheduling</h2>
+    <div class="mkt-cards">
+      <div class="card mkt-card">
+        <h3>The master calendar</h3>
+        <ul class="mkt-feature-list">
+          <li><strong>Day, week and month views</strong> with one column per therapist and a grid interval you choose (5 to 30 minutes).</li>
+          <li><strong>Drag to book, drag to reschedule.</strong> Buffers, turnover and travel show honestly on the grid; business hours shade it.</li>
+          <li><strong>Online rules never block staff.</strong> Notice windows, book-ahead limits, packing and caps shape only what clients see.</li>
+          <li><strong>Staff can record the past.</strong> Create, edit and move appointments that already happened; only completed-and-paid visits lock.</li>
+          <li><strong>Hard rules bind everyone:</strong> no double-booking, room capacity, provider hours.</li>
+          <li><strong>Color by service or by provider</strong>, cancelled-appointment overlay, and a calendar key.</li>
+          <li><strong>Walk-ins and “first available”</strong> round-robin, seniority, random or alphabetical — the owner picks how “any therapist” is assigned.</li>
+        </ul>
+      </div>
+      <div class="card mkt-card">
+        <h3>Availability &amp; breaks</h3>
+        <ul class="mkt-feature-list">
+          <li><strong>Business hours</strong> with multiple ranges per day and every-Nth-week repeats.</li>
+          <li><strong>Per-provider weekly schedules</strong>; providers with none inherit the business hours.</li>
+          <li><strong>Hours follow team availability</strong> (optional): public hours widen or shrink with recurring staff schedules.</li>
+          <li><strong>Date exceptions</strong> for days off and custom hours; time-off requests can apply instantly or route to the owner.</li>
+          <li><strong>Floating auto-breaks</strong> <span class="mkt-tier-tag pro">Pro</span>: “30 minutes after 180 minutes of hands-on work”, visible on the calendar, repositioning as bookings land, locked a set number of hours ahead.</li>
+          <li><strong>Manual breaks and time blocks</strong> on every plan.</li>
+          <li><strong>Adjust-availability mode:</strong> drag on the calendar to add or remove hours instead of booking.</li>
+        </ul>
+      </div>
+      <div class="card mkt-card">
+        <h3>Standing appointments</h3>
+        <ul class="mkt-feature-list">
+          <li><strong>Repeat every N days, weeks or months</strong> for a set number of visits or “does not stop” (books a rolling year ahead).</li>
+          <li><strong>Just this one or the whole series</strong> is asked on every drag, edit and cancel.</li>
+          <li><strong>Standing-slot suggestions</strong> <span class="mkt-tier-tag pro">Pro</span>: when a client’s history shows a rhythm, KinesioCal proposes a series.</li>
+          <li><strong>Deposits and prepay on series:</strong> every future visit asks for payment ahead via the reminder email, with a staff heads-up if it stays unpaid.</li>
+        </ul>
+      </div>
+      <div class="card mkt-card">
+        <h3>Scheduling optimizers <span class="mkt-tier-tag pro">Pro</span></h3>
+        <ul class="mkt-feature-list">
+          <li><strong>Smart block-packing:</strong> public start times step by the whole service-plus-buffer block so no unbookable gaps form.</li>
+          <li><strong>Public start interval:</strong> offer starts every 30, 60 or 90 minutes while staff keep the fine grid.</li>
+          <li><strong>Consecutive-booking mode:</strong> inside a window, offer only times touching existing bookings.</li>
+          <li><strong>Look-busy filter:</strong> hide a share of open public slots, deterministically per day.</li>
+          <li><strong>Per-provider overrides</strong> for notice, consecutive mode and look-busy.</li>
+          <li><strong>Duplicate-booking detector:</strong> warns when the same client books twice in a window.</li>
+        </ul>
+      </div>
+      <div class="card mkt-card">
+        <h3>Hands-on hour caps</h3>
+        <ul class="mkt-feature-list">
+          <li><strong>Online hours cap per provider,</strong> per day and per week — counts only delivered service minutes, never buffers or travel. Every plan.</li>
+          <li><strong>Physical-hours cap</strong> <span class="mkt-tier-tag pro">Pro</span>: a stricter second cap for bodywork; consults and readings still book.</li>
+          <li><strong>Cap-exception services</strong> <span class="mkt-tier-tag pro">Pro</span> that never count and always book.</li>
+          <li>Staff can always book past a cap; they just see a warning.</li>
+        </ul>
+      </div>
+      <div class="card mkt-card">
+        <h3>Locations, rooms &amp; equipment <span class="mkt-tier-tag premium">Premium</span></h3>
+        <ul class="mkt-feature-list">
+          <li><strong>Multiple locations</strong> with their own address and time zone; the booking form gains a location picker.</li>
+          <li><strong>Rooms and equipment as finite resources:</strong> a service that needs a treatment room or a hot-stone warmer only books while one is free.</li>
+          <li><strong>Take a room out of service</strong> without deleting it.</li>
+          <li><strong>Self-service offerings</strong> (sauna, cold plunge) with their own calendar column, capacity and automatic cleanup blocks.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="mkt-section-title">Online booking</h2>
+    <div class="mkt-cards">
+      <div class="card mkt-card">
+        <h3>The public booking page</h3>
+        <ul class="mkt-feature-list">
+          <li><strong>Your own link</strong> (kinesiocal.com/your-name) with one switch to turn public booking on or off.</li>
+          <li><strong>Guests book without an account:</strong> service, time, name and email. Matched to existing records by email or phone, never duplicated.</li>
+          <li><strong>Service-first or provider-first</strong> flow, with provider photos and a week or month calendar in the business’s time zone.</li>
+          <li><strong>Your brand:</strong> logo, intro copy, primary and secondary colors theme the whole page.</li>
+          <li><strong>Length variants, add-ons and “price varies”</strong> tiles; classes and events listed under the 1:1 services.</li>
+          <li><strong>Jump to next available</strong> and a waitlist button when nothing suits.</li>
+          <li><strong>Holiday-aware nudges</strong> <span class="mkt-tier-tag pro">Pro</span>: a soft “Halloween falls on this date — still book?” that never blocks.</li>
+        </ul>
+      </div>
+      <div class="card mkt-card">
+        <h3>Booking policies &amp; requests</h3>
+        <ul class="mkt-feature-list">
+          <li><strong>Notice windows and book-ahead limits</strong>, business-wide or per provider.</li>
+          <li><strong>Day availability per service</strong> (deep tissue only on Tuesdays and Thursdays).</li>
+          <li><strong>Auto-accept or review:</strong> bookings land confirmed or as requests you accept or deny. Per-provider toggle.</li>
+          <li><strong>Cancellation cutoffs and fees recorded</strong> as pending transactions.</li>
+          <li><strong>Deposits and prepay in full</strong> at booking, with per-client overrides, gift-card and account credit applied first.</li>
+          <li><strong>Abandoned-booking recovery:</strong> a declined card or closed tab reopens the slot and logs exactly where the client dropped out, with their details.</li>
+        </ul>
+      </div>
+      <div class="card mkt-card">
+        <h3>Restricted providers &amp; the roster</h3>
+        <ul class="mkt-feature-list">
+          <li><strong>Assigned-only providers:</strong> only their own clients can see or book them online — visible-not-bookable or hidden.</li>
+          <li><strong>“Find your provider”:</strong> an existing client enters the email they book with and gets a confirmation link or code — no account needed.</li>
+          <li><strong>Roster backfill and auto-assign on booking</strong>; providers can manage their own roster.</li>
+          <li><strong>Roster-targeted waitlist and last-chance</strong> sends.</li>
+        </ul>
+      </div>
+      <div class="card mkt-card">
+        <h3>Intake &amp; consent</h3>
+        <ul class="mkt-feature-list">
+          <li><strong>Custom booking fields</strong> (health intake, how-found, anything) on every plan.</li>
+          <li><strong>Consent and liability forms</strong> <span class="mkt-tier-tag pro">Pro</span>: upload a PDF or start from policy, minor and prenatal templates; e-sign at booking or on paper; versioned with renewal tracking.</li>
+          <li><strong>Targeted per service, class or event</strong>, with signatures stored on the client record.</li>
+        </ul>
+      </div>
+      <div class="card mkt-card">
+        <h3>Couples &amp; pair services</h3>
+        <ul class="mkt-feature-list">
+          <li><strong>One flow, two guests, two therapists</strong>, one time. Each seat checks real availability including buffers, breaks, travel and caps.</li>
+          <li><strong>Linked appointments</strong> confirm, cancel and decline together.</li>
+          <li><strong>Per-seat restricted-provider unlock</strong> using each guest’s own contact.</li>
+        </ul>
+      </div>
+      <div class="card mkt-card">
+        <h3>Find-a-provider directory</h3>
+        <ul class="mkt-feature-list">
+          <li><strong>A public, searchable directory</strong> by location, name and specialty — every business is listed on every plan.</li>
+          <li><strong>Profile page per practice</strong> linking straight to its booking page.</li>
+          <li><strong>Fully mobile practices keep their address private</strong> while still anchoring travel times and near-me search.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="mkt-section-title">House calls &amp; mobile work</h2>
+    <div class="mkt-cards">
+      <div class="card mkt-card">
+        <h3>Mobile booking on every plan</h3>
+        <ul class="mkt-feature-list">
+          <li><strong>Mobile-eligible services</strong> ask for a service address at booking (auto-filled from the client’s file).</li>
+          <li><strong>Preset travel block</strong> per visit when you don’t need the engine.</li>
+          <li><strong>Travel time by hand:</strong> override the drive for any single booking.</li>
+          <li><strong>Mobile events</strong> reserve drive time to the venue and back.</li>
+        </ul>
+      </div>
+      <div class="card mkt-card">
+        <h3>Drive-time travel engine <span class="mkt-tier-tag premium">Premium</span></h3>
+        <ul class="mkt-feature-list">
+          <li><strong>Real driving minutes per leg</strong> from a tiered routing engine (open-source routing first, paid live-traffic routing as a fallback).</li>
+          <li><strong>Travel in and travel out stamped on each visit</strong> and drawn as bands on the calendar; shared client-to-client legs drawn once.</li>
+          <li><strong>Safety margin, minimum per trip, and round-up to the grid.</strong></li>
+          <li><strong>“Find times that fit”</strong> lists bookable starts with the drive in and out on each one; the public page offers the same honest availability.</li>
+          <li><strong>Bookend vs. isolated visits:</strong> suggestions snug against existing visits share a leg; otherwise each gets its own round trip. The awkward dead zone in between is never offered.</li>
+          <li><strong>Neighbors recompute</strong> when a visit is created, moved or cancelled; anything that no longer fits gets a review flag.</li>
+          <li><strong>Service areas</strong> fence public booking; staff see “beyond your area — you can still book it”.</li>
+          <li><strong>Client address changes</strong> offer to move upcoming home visits and flag them for a travel re-check.</li>
+          <li><strong>Mobile travel vs. billable time</strong> in Reports.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="mkt-section-title">Services, classes &amp; events</h2>
+    <div class="mkt-cards">
+      <div class="card mkt-card">
+        <h3>Services &amp; pricing</h3>
+        <ul class="mkt-feature-list">
+          <li><strong>Unlimited services, categories, length variants and add-ons</strong> with pre and post buffers and a color each.</li>
+          <li><strong>Per-provider price and buffer overrides</strong>; opt a therapist out of a single length.</li>
+          <li><strong>Flags:</strong> bookable online, mobile, physical (counts toward the hands-on cap), cap exception, couples, new-clients-only or existing-only.</li>
+          <li><strong>Bulk CSV import</strong> of the whole menu — categories, services, add-ons, classes and events in one sheet, with a template.</li>
+          <li><strong>Resource requirements</strong> per service and per add-on <span class="mkt-tier-tag premium">Premium</span>.</li>
+        </ul>
+      </div>
+      <div class="card mkt-card">
+        <h3>Classes <span class="mkt-tier-tag pro">Pro</span></h3>
+        <ul class="mkt-feature-list">
+          <li><strong>Reusable class templates</strong> with capacity, per-seat price, and public / private-link / offline visibility.</li>
+          <li><strong>Each attendee is a real appointment:</strong> confirm, arrive, checkout, receipts and recommendations all work per seat.</li>
+          <li><strong>Public sessions list</strong> with seats left; full or past sessions drop off by themselves.</li>
+          <li><strong>Roster card on the calendar tile.</strong></li>
+        </ul>
+      </div>
+      <div class="card mkt-card">
+        <h3>Events &amp; chair-massage kits <span class="mkt-tier-tag premium">Premium</span></h3>
+        <ul class="mkt-feature-list">
+          <li><strong>A window split into short sessions</strong> with turnover; the cap is computed from the window and the therapists.</li>
+          <li><strong>Pooled or assigned chairs</strong>, per-therapist turnover, before and after buffers.</li>
+          <li><strong>Public, private-link or paper-only booking</strong>; kiosk mode hands the tablet to the walk-up with the slot locked.</li>
+          <li><strong>Flyer with QR code, blank and filled sign-in sheets</strong> with your disclaimer text; organizer gets them by email.</li>
+          <li><strong>Organizer portal:</strong> the host sees the live sheet, moves participants, fixes a typo, downloads the sheets.</li>
+          <li><strong>Who pays:</strong> each attendee or the organizer in full. Initials, no-shows and per-seat payment on the day.</li>
+          <li><strong>Event waitlist</strong> when every session is taken.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="mkt-section-title">Clients &amp; safety</h2>
+    <div class="mkt-cards">
+      <div class="card mkt-card">
+        <h3>Client records</h3>
+        <ul class="mkt-feature-list">
+          <li><strong>Searchable client list</strong> with quick add, appointment history, intake answers and payment history.</li>
+          <li><strong>Client-visible and staff-only notes</strong> (with a standing no-PHI reminder).</li>
+          <li><strong>Staff-only flags</strong> (good tipper, talker, needs extra time) with renewal and birthday reminders.</li>
+          <li><strong>Per-client transition time:</strong> extra turnover for the client who needs it.</li>
+          <li><strong>Merge duplicates</strong> and keep the other contact details as secondaries; every appointment, note, flag and package moves.</li>
+          <li><strong>CSV import and export</strong> with a template, on every plan.</li>
+          <li><strong>Contact edits with a review flow:</strong> staff edits to an account-holding client go out for the client to confirm; sign-in email changes verify at the new address.</li>
+          <li><strong>Per-client payment rules:</strong> deposit or prepay overrides on the profile.</li>
+        </ul>
+      </div>
+      <div class="card mkt-card">
+        <h3>Blocklist</h3>
+        <ul class="mkt-feature-list">
+          <li><strong>Block by client, email or phone</strong> with partial info; any filled contact point matches at booking.</li>
+          <li><strong>Blocking means it:</strong> no online booking, no messaging you through the platform, no emails of any kind, roster assignments suspended.</li>
+          <li><strong>Generic or custom refusal message</strong>; the reason and documentation stay internal.</li>
+          <li><strong>Unblocking restores exactly</strong> what the block suspended.</li>
+          <li><strong>Staff-requested blocks</strong> go to the owner for confirmation, with an interim block for that staff member only.</li>
+          <li><strong>Review dates, documentation uploads and internal notes.</strong></li>
+        </ul>
+      </div>
+      <div class="card mkt-card">
+        <h3>Shared safety network</h3>
+        <ul class="mkt-feature-list">
+          <li><strong>Location-based and automatic:</strong> every participating business within your alert radius, no lists to manage.</li>
+          <li><strong>Share a report</strong> from a blocklist entry, with or without documentation (undocumented reports are flagged everywhere).</li>
+          <li><strong>Identity-minimized alerts:</strong> a match on a booking attempt shows the category and documentation status, never the identifier or the reporter.</li>
+          <li><strong>Auto-import by category</strong> into your blocklist, or log only.</li>
+          <li><strong>Platform-mediated challenges</strong> for the accused; minor-category reports expire after a year.</li>
+          <li>Never gated by plan. Launching after legal review.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="mkt-section-title">Reminders, notifications &amp; automation</h2>
+    <div class="mkt-cards">
+      <div class="card mkt-card">
+        <h3>Email reminders &amp; follow-ups</h3>
+        <ul class="mkt-feature-list">
+          <li><strong>A day-before reminder is set up from day one.</strong> Add more sends before and after the visit (2 per appointment on Basic, 3 on Professional, unlimited on Premium).</li>
+          <li><strong>Post-visit follow-ups</strong> <span class="mkt-tier-tag pro">Pro</span>.</li>
+          <li><strong>Attendance confirmations</strong> <span class="mkt-tier-tag pro">Pro</span>: a confirm-you’re-coming link whose ✓ shows on the calendar card.</li>
+          <li><strong>Confirmations, cancellations and reschedules</strong> on every plan.</li>
+          <li><strong>Sender identity:</strong> from-name and reply-to so replies reach you.</li>
+          <li><strong>Email privacy toggle:</strong> strip service, provider and time from client emails and say “sign in to view”.</li>
+          <li><strong>SMS reminders</strong> <span class="mkt-tier-tag premium">Premium</span> when SMS ships.</li>
+        </ul>
+      </div>
+      <div class="card mkt-card">
+        <h3>In-app notifications</h3>
+        <ul class="mkt-feature-list">
+          <li><strong>One bell and drawer</strong> for staff and for clients: requests, cancellations, client and team updates, safety alerts.</li>
+          <li><strong>Per-category in-app and email toggles</strong> for each person.</li>
+          <li><strong>Daily schedule digest</strong> <span class="mkt-tier-tag pro">Pro</span>: each staff member’s morning rundown, with “No future appointment” next to the clients to rebook at checkout.</li>
+        </ul>
+      </div>
+      <div class="card mkt-card">
+        <h3>Waitlist &amp; automations <span class="mkt-tier-tag pro">Pro</span></h3>
+        <ul class="mkt-feature-list">
+          <li><strong>Waitlist</strong> by specific dates or “ongoing on Tuesdays”, with time windows and optional closed-hours enforcement.</li>
+          <li><strong>Automatic opening offers</strong> in signup order when a matching spot frees up; manual blasts too.</li>
+          <li><strong>Last-chance blasts</strong> for short-notice openings, only to clients who asked, with a link that unlocks times inside the notice window.</li>
+          <li><strong>Auto-condense:</strong> consent-based move requests to tighten a gappy day, with owner escalation and a do-not-ask flag.</li>
+          <li><strong>Client recapture:</strong> win-back emails to lapsed clients with dry runs, suppression and CAN-SPAM-compliant unsubscribe.</li>
+          <li><strong>Recommendations library:</strong> private aftercare files and notes auto-sent after a service, delivered to the portal.</li>
+          <li><strong>Milestone and care notifications.</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="mkt-section-title">Payments, commerce &amp; money</h2>
+    <div class="mkt-cards">
+      <div class="card mkt-card">
+        <h3>Getting paid (never gated)</h3>
+        <ul class="mkt-feature-list">
+          <li><strong>Stripe card payments</strong> on every plan: deposits and prepay at booking, card on file, pay links, refunds and account credit.</li>
+          <li><strong>Checkout from the calendar</strong> with tips, sale lines, and pay-for-someone-else.</li>
+          <li><strong>Unified point of sale</strong> for walk-in retail and standalone baskets.</li>
+          <li><strong>Payments log</strong> of every attempt, decline, refund and saved card.</li>
+          <li><strong>Invoices</strong> for any date range with itemized add-ons, paid status and provider credentials; staff email or download, clients request their own from the portal.</li>
+        </ul>
+      </div>
+      <div class="card mkt-card">
+        <h3>Gift cards, packages, promos &amp; retail <span class="mkt-tier-tag pro">Pro</span></h3>
+        <ul class="mkt-feature-list">
+          <li><strong>Gift cards</strong> composed from services, packages or cash, with an earmarked tip, sender and recipient emails, deliver-on dates and expiry you control (balances never auto-forfeit).</li>
+          <li><strong>Packages and credits</strong> that redeem themselves at checkout.</li>
+          <li><strong>Memberships:</strong> recurring dues that grant credits each cycle, auto-charged to a card on file, with portal pause, cancel and share per your policy.</li>
+          <li><strong>Promo codes</strong> with constraints; <strong>retail products</strong> with inventory and images.</li>
+          <li><strong>Online shop</strong> on the booking page for gift cards, packages and retail.</li>
+          <li><strong>Redemption and refund terms</strong> per offering, printed on receipts and in the portal.</li>
+        </ul>
+      </div>
+      <div class="card mkt-card">
+        <h3>Money, reports &amp; accounting</h3>
+        <ul class="mkt-feature-list">
+          <li><strong>Money page:</strong> revenue by provider and period, commission splits, tips, earnings table with CSV export.</li>
+          <li><strong>Reports:</strong> utilization, rebooking rate, no-shows and repeat offenders, revenue by service, mobile travel vs. billable time.</li>
+          <li><strong>Accounting suite</strong> <span class="mkt-tier-tag premium">Premium</span>: Schedule C categories, expense CSV import, reimbursement tickets, tax lines, W-2/1099 pay-run math, and a P&amp;L with cash or earned toggle and the deferred-revenue line.</li>
+          <li><strong>Deferred revenue done properly:</strong> gift and package sales post to a liability and recognize on delivery.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="mkt-section-title">Team, portal &amp; platform</h2>
+    <div class="mkt-cards">
+      <div class="card mkt-card">
+        <h3>Team &amp; permissions</h3>
+        <ul class="mkt-feature-list">
+          <li><strong>Free staff logins</strong> on every plan (5 per practice, plus 2 for each extra seat); you pay per active therapist schedule, never per login.</li>
+          <li><strong>Roles plus per-person overrides</strong> enforced on the server; the UI hides what a member can’t use.</li>
+          <li><strong>Provider profiles</strong> with photo, bio, calendar color, seniority rank, hour caps and license credentials.</li>
+          <li><strong>Time off</strong> applied directly or through approval.</li>
+          <li><strong>Activity, booking and email logs</strong> so “what happened?” always has an answer.</li>
+        </ul>
+      </div>
+      <div class="card mkt-card">
+        <h3>The client portal</h3>
+        <ul class="mkt-feature-list">
+          <li><strong>One login across every practice</strong> a client visits: upcoming and past appointments, “I’m coming”, reschedule, cancel.</li>
+          <li><strong>Your providers</strong> per business with one-click rebooking; forms, recommendations, cards on file, gift and package balances, memberships, transactions.</li>
+          <li><strong>Waitlist joins</strong> with multiple dates and open-hours checks.</li>
+          <li><strong>Contact edits that fan out</strong> to every linked practice.</li>
+          <li><strong>Your data &amp; invoices:</strong> download everything a business holds, request a PDF invoice, or delete with a 7-day grace window.</li>
+          <li><strong>Hosted events</strong> for organizers.</li>
+        </ul>
+      </div>
+      <div class="card mkt-card">
+        <h3>Platform &amp; trust</h3>
+        <ul class="mkt-feature-list">
+          <li><strong>Easy Mode:</strong> essentials-only screens with sensible defaults; toggling never changes a setting.</li>
+          <li><strong>Role-specific walkthroughs</strong>, in-app help docs and support tickets.</li>
+          <li><strong>Google Calendar sync</strong> <span class="mkt-tier-tag pro">Pro</span> per provider, two-way, with busy blocks reducing availability.</li>
+          <li><strong>Light and dark mode</strong>, remembered on your account.</li>
+          <li><strong>Data rights on every plan:</strong> client and business exports, anonymizing deletion with legal retention holds, every request logged.</li>
+          <li><strong>Idle sign-out, encrypted sensitive fields, and audit trails</strong> built for a HIPAA posture.</li>
+          <li><strong>Priority support and white-glove setup</strong> <span class="mkt-tier-tag premium">Premium</span>.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card mkt-cta">
+      <h2>Which plan has what?</h2>
+      <p>The pricing page has the full tier-by-tier comparison.</p>
+      <a class="button" href="pricing.html">Compare plans</a>
+    </div>
+  </section>
+
+  <footer class="mkt-footer">
+    <div>
+      <strong>KinesioCal</strong>
+      <p>Booking and practice management, built by a therapist.</p>
+    </div>
+    <nav class="mkt-links">
+      <a href="index.html#features">Features</a>
+      <a href="features.html">All features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="index.html#about">About</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy policy</a>
+      <a href="terms.html">Terms of service</a>
+    </nav>
+    <div class="legal-line">
+      &copy; <span class="kc-year">2026</span> KinesioCal, LLC &middot;
+      <a href="mailto:KinesioCalendar@gmail.com">KinesioCalendar@gmail.com</a> &middot;
+      <a href="privacy.html">Privacy</a> &middot;
+      <a href="terms.html">Terms</a>
+    </div>
+  </footer>
+  <script src="theme.js"></script>
+</body>
+</html>
