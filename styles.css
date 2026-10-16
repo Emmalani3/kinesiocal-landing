@@ -576,3 +576,60 @@ h1, h2, h3 { line-height: 1.2; }
   .mkt-compare thead th { top: 0; }
   .mkt-compare td .why { display: none; }
 }
+
+/* ------------------------------ seats vs logins --------------------------- */
+
+.mkt-seat-card { padding: 1.4rem; display: grid; gap: 1.1rem; }
+
+.mkt-seat-row { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0.9rem; align-items: center; }
+
+.mkt-seat-pill {
+  display: grid;
+  gap: 0.25rem;
+  padding: 1rem;
+  border-radius: 14px;
+  background: var(--hero-gradient);
+  color: #fff;
+  text-align: center;
+  justify-items: center;
+}
+
+.mkt-seat-pill svg { width: 2.2rem; height: 2.2rem; }
+.mkt-seat-pill strong { font-size: 1.05rem; }
+.mkt-seat-pill span { font-size: 0.82rem; opacity: 0.9; }
+
+.mkt-seat-plus { font-size: 2rem; font-weight: 700; color: var(--text-secondary); }
+
+.mkt-seat-logins { display: grid; gap: 0.5rem; }
+.mkt-seat-logins strong { font-size: 1.05rem; }
+.mkt-seat-logins ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.mkt-seat-logins li {
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: rgb(3 132 14 / 0.1);
+}
+:root[data-theme="dark"] .mkt-seat-logins li { background: rgb(124 227 137 / 0.15); }
+
+.mkt-seat-foot {
+  display: grid;
+  gap: 0.35rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+.mkt-seat-foot strong { color: var(--text-primary); }
+
+@media (max-width: 720px) {
+  .mkt-seat-row { grid-template-columns: 1fr; }
+  .mkt-seat-plus { text-align: center; }
+}
+
+/* ------------------------------ pricing add-on card ----------------------- */
+
+.mkt-addon { border: 2px dashed var(--border-subtle); position: relative; }
+.mkt-addon-tag { background: var(--bg-page); color: var(--text-secondary); }
+:root[data-theme="dark"] .mkt-addon-tag { background: var(--bg-page); }
