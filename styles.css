@@ -644,3 +644,77 @@ h1, h2, h3 { line-height: 1.2; }
 .mkt-addon-details summary::-webkit-details-marker { display: none; }
 .mkt-addon-details[open] summary { margin-bottom: 0.75rem; }
 .mkt-addon-details .mkt-points { margin-bottom: 0; }
+
+/* ------------------------------ about: headshot + carousel ---------------- */
+
+.mkt-headshot-wrap { display: flex; justify-content: center; }
+.mkt-headshot { width: auto; max-width: 100%; max-height: 420px; border-radius: 18px; }
+
+.mkt-carousel {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mkt-carousel-track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  border-radius: 16px;
+}
+.mkt-carousel-track::-webkit-scrollbar { display: none; }
+
+.mkt-carousel-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.mkt-carousel-slide img {
+  display: block;
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+}
+
+.mkt-carousel-slide figcaption { font-size: 0.9rem; color: var(--text-secondary); text-align: center; }
+
+.mkt-carousel-btn {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 4px 12px rgb(3 25 106 / 0.1);
+}
+.mkt-carousel-btn svg { width: 1.3rem; height: 1.3rem; }
+.mkt-carousel-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+.mkt-carousel-dots { grid-column: 1 / -1; display: flex; justify-content: center; gap: 0.5rem; }
+.mkt-carousel-dots button {
+  width: 0.6rem; height: 0.6rem; padding: 0; border-radius: 50%;
+  border: 1px solid var(--text-secondary); background: transparent; cursor: pointer;
+}
+.mkt-carousel-dots button.active { background: var(--accent); border-color: var(--accent); }
+
+@media (max-width: 720px) {
+  .mkt-carousel { grid-template-columns: 1fr; }
+  .mkt-carousel-btn { display: none; }
+  .mkt-carousel-slide img { height: 300px; }
+  .mkt-headshot { max-height: 340px; }
+}

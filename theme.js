@@ -16,3 +16,37 @@
 document.querySelectorAll('.kc-year').forEach(function (el) {
   el.textContent = String(new Date().getFullYear());
 });
+
+// Photo carousel on the About section (scroll-snap track + buttons + dots).
+document.querySelectorAll('.mkt-carousel').forEach(function (root) {
+  var track = root.querySelector('.mkt-carousel-track');
+  var slides = Array.prototype.slice.call(track.querySelectorAll('.mkt-carousel-slide'));
+  var dots = root.querySelector('.mkt-carousel-dots');
+  if (!track || !slides.length) return;
+  function index() {
+    return Math.round(track.scrollLeft / track.clientWidth);
+  }
+  function go(i) {
+    var n = (i + slides.length) % slides.length;
+    track.scrollTo({ left: n * track.clientWidth, behavior: 'smooth' });
+  }
+  slides.forEach(function (_, i) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.setAttribute('role', 'tab');
+    b.setAttribute('aria-label', 'Photo ' + (i + 1));
+    b.addEventListener('click', function () { go(i); });
+    dots.appendChild(b);
+  });
+  function paint() {
+    var cur = index();
+    Array.prototype.forEach.call(dots.children, function (d, i) {
+      d.classList.toggle('active', i === cur);
+      d.setAttribute('aria-selected', i === cur ? 'true' : 'false');
+    });
+  }
+  root.querySelector('.prev').addEventListener('click', function () { go(index() - 1); });
+  root.querySelector('.next').addEventListener('click', function () { go(index() + 1); });
+  track.addEventListener('scroll', function () { window.requestAnimationFrame(paint); });
+  paint();
+});
