@@ -39,6 +39,7 @@ server); the showcase data is tagged `notes="showcase"` on 2026-10-20 /
 | `client-invoice.png`, `portal-invoice.png`, `portal-appointments.png` | Client-downloadable invoices and the portal |
 | `repeat-options.png` | Standing appointments |
 | `easy-mode-settings.png` | Easy Mode |
+| `reports-what-sold.png`, `accounting-pnl.png`, `accounting-income.png` | Accounting overview and the Reports statistics pie (2026-10-17) |
 | `gift-grants.png` | Gift cards, packages, memberships and the gift-grant send |
 | `booking-log.png` | Abandoned bookings (a real declined-card run with Stripe's 4000 0000 0000 0002 test card, 2026-10-16) |
 
