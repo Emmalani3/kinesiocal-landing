@@ -790,3 +790,19 @@ body.mkt-lightbox-open { overflow: hidden; }
   .mkt-nav { position: static; }
   [id] { scroll-margin-top: 16px; }
 }
+
+/* Generated legal pages (manage.py export_legal_site in the app repo) */
+.legal h3 { font-size: 1.05rem; margin: 1.6rem 0 0.4rem; }
+.legal ol { padding-left: 1.4rem; }
+.legal table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: 0.95rem; }
+.legal th, .legal td { text-align: left; vertical-align: top; padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--border-subtle); line-height: 1.5; }
+.legal th { color: var(--text-secondary); font-weight: 600; }
+.legal .legal-note {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-left: 4px solid var(--accent, #03840E);
+  border-radius: 12px;
+  padding: 0.9rem 1.2rem;
+  margin: 0 0 1.5rem;
+}
+.legal .legal-back { margin-top: 2.5rem; }

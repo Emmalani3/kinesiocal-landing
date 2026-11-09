@@ -13,11 +13,24 @@ GitHub Pages; no build step, no dependencies.
 | `roadmap.html` | Coming soon — this year / next year / no timeline yet (HIPAA certification note, SMS) |
 | `pricing.html` | Plans & pricing — three tier cards plus the full tier-by-tier comparison table (`#compare`) |
 | `support.html` | Support & contact page (KinesioCalendar@gmail.com) |
-| `privacy.html` | Privacy policy |
-| `terms.html` | Terms of service |
+| `legal.html` | Legal index — **generated**: Provider terms vs Client terms, links to every document |
+| `terms.html` | Provider Terms of Service — **generated** (file name kept so old links work) |
+| `client-terms.html` | Client Terms of Use — **generated** |
+| `privacy.html` | Privacy Policy — **generated** |
+| `beta-agreement.html` | Beta Tester Agreement & NDA — **generated** |
+| `auto-renewal.html` | Automatic Renewal Terms — **generated** |
 | `styles.css` | Shared stylesheet — brand palette from the product design bible (navy→teal gradient, Leaf Green accent), light default + dark toggle; screenshot, feature-list and comparison-table styles at the end |
 | `theme.js` | Dark-mode toggle (OS preference default, persisted in `localStorage` `kc-theme`) |
 | `img/` | Product screenshots (see below) |
+
+## Legal pages are generated
+
+The six legal pages are written by the app repository's
+`manage.py export_legal_site <this folder>` from `backend/legal/*.md`
+(the same text the app serves and asks people to accept), inside the
+header and footer lifted from `index.html`. **Never edit them by hand** —
+edit the Markdown in the app repo, run the command, commit both repos.
+Each page's first comment names the document version it came from.
 
 ## Screenshots (`img/`)
 
